@@ -2,43 +2,31 @@
 
 	{% block stylesheetBase %}
 		{{ parent() }}
-		<link rel="stylesheet" href="css/home.css">
+		<link rel="stylesheet" href="css/views/home.css">
 	{% endblock %}
 
-	{% block backLink %}{% endblock %}
+	{% block header %}
+		<h2>Créez une liste et partagez-la avec qui vous voulez</h2>
+	{% endblock %}
+			
 
 	{% block container %}
-		<h3>Azur Design & Solution, </h3>
-		<p>c'est un ensemble de compétences mises à votre service, dans le domaine de <strong>la publicité, l'image de marque et la décoration</strong>.</p>
-
-		<p>Pour mettre en avant une idée, un concept, une marque, plusieurs supports sont à votre disposition. Nous vous proposons différentes solutions adaptées à votre situation en fonction de <strong>votre budget</strong>.</p>
-
-		<h3>Présence sur le Web : </h3>
-		<p>Grace à des solutions « <strong>clés en mains</strong> », profiter des dernières technologies et ouvrez-vous à ce média aujourd'hui incontournable.</p>
-		<div class="exemples">
-			<img src="img/exemple8.jpg">
-			<img src="img/exemple6.jpg">
-			<img src="img/exemple5.jpg">
-			<img src="img/exemple7.jpg">
+		<div id="description">
+			<p>My WishList est un site qui vous permet de créer une liste quelque soit le type d'évenement à souhaiter. </p>
+			<h3>Comment faire ?</h3>
+			<p>Une fois connecté, créez une liste d'anniversaire, de Noel, pour un marriage, une naissance ou tout autre évenement. Partagez ensuite cette liste avec vos proches de façon à pouvoir ajouter des éléments à la liste, en supprimer ou en modifier. </p>
+			<p>Vous pouvez y ajouter une photo, un nom, une description, un prix constaté ainsi que le lieu où le trouver.</p>
 		</div>
-
-		<h3>Lettrage & Marquage Adhésif : </h3>
-		<p>Murs, vitrines, vitres, miroirs, vehicules, enseignes, ainsi que plein d'autres supports permettent un <strong>marquage publicitaire ou décoratif</strong> afin de créer des univers qui vous ressemblent.</p>
-		<div class="exemples">
-			<img src="img/exemple1.jpg">
-			<img src="img/exemple2.jpg">
-			<img src="img/exemple3.jpg">
-			<img src="img/exemple4.jpg">
-		</div>
-
-
-		<h3>Documents Commerciaux & Identité Visuelle : </h3>
-		<p>Création de Plaquettes publicitaires, Flyers, Affiches, Cartes de visite, Matrices administratives (Factures, Devis, ...), création de logo, bannières et entêtes personnalisées. </p>
-		<div class="exemples">
-			<img src="img/exemple9.jpg">
-			<img src="img/exemple10.jpg">
-		</div>
-
-		<br>
-		<h4>Nos créations sont aussi bien destinées aux entreprises qu'aux particuliers. Nous créons des environnements à votre image et adaptés à tout budget.</h4>
+		<div id="group-btn">
+			<ul>
+				<li><a class="btn" href="/inscription">
+					<i class="fa fa-edit fa-fw fa-2x"></i>
+					<span>S'inscrire</span>
+				</a></li>
+				<li><a class="btn" href="/connexion">
+					<i class="fa fa-sign-in fa-fw fa-2x"></i>
+					<span>Se connecter</span>
+				</a></li>
+			</ul>
+		</div>	
 	{% endblock %}

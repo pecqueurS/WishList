@@ -1,0 +1,88 @@
+{
+	"Username": {
+		"name": "login",
+		"options": {
+			"type": "text",
+			"label": "Identifiant",
+			"class": "input",
+			"placeholder": "mon identifiant",
+			"required": true,
+			"value": true,
+			"constraints":{
+				"NotBlank": true,
+				"Type": "string",
+				"Regex": {
+					"pattern": "/.*/",
+					"match": true
+				},
+				"Length":{
+					"min": 5,
+					"max": 16
+				}
+			}
+		}
+	},
+	"Password": {
+		"name": "pwd",
+		"options": {
+			"type": "password",
+			"label": "Mot de passe",
+			"class": "input",
+			"placeholder": "mon mot de passe",
+			"required": true,
+			"value": true,
+			"constraints":{
+				"NotBlank": true,
+				"Type": "string",
+				"Regex": {
+					"pattern": "/.*/",
+					"match": true
+				},	
+				"Length":{
+					"min": 6,
+					"max": 16
+				}
+			}
+		}
+	},
+	"Password2": {
+		"name": "pwd2",
+		"options": {
+			"type": "password",
+			"label": "Confirmer le mot de passe",
+			"class": "input",
+			"placeholder": "confirmer mon mot de passe",
+			"required": true,
+			"value": true,
+			"constraints":{
+				"NotBlank": true,
+				"Type": "string",
+				"Regex": {
+					"pattern": "/.*/",
+					"match": true
+				},	
+				"Length":{
+					"min": 6,
+					"max": 16
+				}
+			}
+		}
+	},
+	"email": {
+		"name": "email",
+		"options": {
+			"type": "email",
+			"label": "Email",
+			"class": "input",
+			"placeholder": "mon email",
+			"required": true,
+			"value": true,
+			"constraints":{
+				"NotBlank": true,
+				"Type": "string",
+				"Email": true
+			}
+		}
+	}
+}
+

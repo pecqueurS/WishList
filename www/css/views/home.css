@@ -1,0 +1,49 @@
+#group-btn {
+	text-align: center;
+
+}
+
+#group-btn ul {
+	display:inline-block;
+}
+
+#group-btn ul li {
+	display:inline-block;
+	margin: 40px 20px 20px;
+}
+
+#group-btn ul li a {
+	display: block;
+	width:150px;
+	height:100px;
+	font-size: 1.5em;
+}
+
+#group-btn ul li a i {
+	display: block;
+	margin: 15px auto 0;
+}
+
+#description {
+	padding:20px;
+}
+
+#description h3 {
+	margin:10px 0 5px;
+	font-family: 'HandWriter';
+	font-size: 1.5em;
+	color:#78a9c0;
+}
+
+#description p {
+	margin-bottom: 5px;
+}
+
+#submit {
+	float:right;
+}
+
+#form-btn {
+	margin-top:20px;
+}
+

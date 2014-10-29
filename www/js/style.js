@@ -1,4 +1,4 @@
-var initResize = function(basicFontSize, ratioLogo, heightHeader) {
+/*var initResize = function(basicFontSize, ratioLogo, heightHeader) {
 	// Font-size
 	var actualWidth = parseInt($(this).width());
 	actualWidth = actualWidth < 550 ? 550 : actualWidth;
@@ -24,4 +24,4 @@ $(document).ready(function() {
 	$('#lang > img').click(function() {
 		$('#lang > div').toggle();
 	});
-});
+});*/

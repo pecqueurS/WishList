@@ -1,5 +1,5 @@
 {
-    "appName": "ads",
+    "appName": "WishList",
     "serveurs" : {
         "windows": {
             "name": "",
@@ -14,10 +14,10 @@
         },
 
         "linux": {
-            "name": "Azur design & Solution",
+            "name": "My WishList",
             "protocole": "http",
-            "host": "debian.azurdesignsolution.dev",
-            "bdd_Database": "ads",
+            "host": "debian.wishlist.dev",
+            "bdd_Database": "wishlist",
             "bdd_username": "root",
             "bdd_password": "oscar",
             "bdd_bddServer": "localhost",
@@ -26,10 +26,10 @@
         },
 
         "reseau": {
-            "name": "Azur design & Solution",
+            "name": "My WishList",
             "protocole": "http",
-            "host": "192.168.1.36",
-            "bdd_Database": "ads",
+            "host": "192.168.1.37",
+            "bdd_Database": "wishlist",
             "bdd_username": "root",
             "bdd_password": "oscar",
             "bdd_bddServer": "localhost",
@@ -38,7 +38,7 @@
         },
 
         "distant": {
-            "name": "Azur design & Solution",
+            "name": "My WishList",
             "protocole": "http",
             "host": "xxx",
             "bdd_Database": "xxx",
@@ -66,7 +66,9 @@
 
     "environment":  "DEV",
 
+    "logType": "ERR_ALL",
+
     "constantes": {},
 
-    "translateType2": "bdd"
+    "translateType": "noTranslate"
 }
