@@ -64,6 +64,21 @@ h2 {
 	color:#78a9c0;
 }
 
+body > #content > header {
+	position: relative;
+}
+
+body > #content > header > aside {
+	position: absolute;
+	top:0;
+	right:0;
+	color:#78a9c0;
+}
+
+body > #content > header > aside i {
+	font-size: 1.2rem;
+}
+
 .container .btn {
 	display: inline-block;
 	padding:10px;
@@ -111,4 +126,14 @@ h2 {
 	padding-left: 10px;
 	font-size: 0.75em;
 	color:red;
+}
+
+div.ui-datepicker{
+ font-size:12px;
+}
+
+td.ui-datepicker-today a.ui-state-highlight{
+	background:linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.1)),  #c3eafb;
+	border-color:#78a9c0;
+	color:#49607A;
 }

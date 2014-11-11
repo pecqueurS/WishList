@@ -60,7 +60,8 @@ body > #content > .container {
 }
 
 .wrapper input[type="text"] {
-    padding-left: 40px;
+    padding-left: 60px;
+    width: calc(100% - 74px);
 }
 
 .wrapper:before {
@@ -69,8 +70,11 @@ body > #content > .container {
     position: absolute;
     top: 0;
     left: 2px;
+    display:block;
+    width:35px;
+    text-align: center;
     padding:7px;
-    content: "\f002";
+    content: "\f00e";
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background: gray;

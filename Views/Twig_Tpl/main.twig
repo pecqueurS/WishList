@@ -29,6 +29,19 @@
 			{% endblock %}
 			{% block nav %}
 			{% endblock %}
+			<aside>
+			{% if session.user is defined %}
+				<a href="{{ url.webroot }}">
+					<i class="fa fa-toggle-on fa-fw"></i>
+					<span>Connecté</span>
+				</a>
+			{% else %}
+				<div style="color:red;cursor:default">
+					<i class="fa fa-toggle-on fa-fw fa-rotate-180"></i>
+					<span>Déconnecté</span>
+				</div>
+			{% endif %}
+			</aside>
 		</header>
 
 		

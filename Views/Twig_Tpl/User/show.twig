@@ -2,11 +2,15 @@
 
 	{% block stylesheetBase %}
 		{{ parent() }}
+		<link rel="stylesheet" href="js/datepicker-jquery-ui-1.11.2/jquery-ui.min.css">
 		<link rel="stylesheet" href="css/views/profil.css">
 	{% endblock %}
 
 	{% block javascript %}
 		{{ parent() }}
+		<script src="js/datepicker-jquery-ui-1.11.2/jquery-ui.min.js"></script>
+		<script src="js/mask-jquery-plugin/jquery.maskedinput.min.js"></script>
+
 		<script type="text/javascript" src="js/views/user.js"></script>
 	{% endblock %}
 
@@ -28,7 +32,7 @@
 					<span>Mes Listes</span>
 				</a></li>
 				<li><a class="btn" href="#searchList">
-					<i class="fa fa-search fa-fw"></i>
+					<i class="fa fa-search-plus fa-fw"></i>
 					<span>Chercher Liste</span>
 				</a></li>
 				<li><a class="btn" href="#profil">
@@ -45,7 +49,7 @@
 					{{ form('NewList', 'interessed') }} 
 					{{ form('NewList', 'date') }} 
 					<div id="form-btn">
-						<button id="submit" class="btn" type="submit" name="submit"><i class="fa fa-check fa-fw"></i> Créer ma liste</button>
+						<button id="submitNewList" class="btn" type="submit" name="submitNewList"><i class="fa fa-check fa-fw"></i> Créer ma liste</button>
 					</div>
 				</form>	
 			</div>
@@ -79,7 +83,7 @@
 					{{ form('Profil', 'email') }} 
 					
 					<div id="form-btn">
-						<button id="submit" class="btn" type="submit" name="submit"><i class="fa fa-check fa-fw"></i> Modifier mon profil</button>
+						<button id="submitProfil" class="btn" type="submit" name="submitProfil"><i class="fa fa-check fa-fw"></i> Modifier mon profil</button>
 					</div>
 				</form>
 			</div>

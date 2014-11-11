@@ -3,7 +3,7 @@
 		"name": "type",
 		"options": {
 			"type": "choice",
-			"label": "Evenement",
+			"label": "Evènement",
 			"class": "input",
 			"placeholder": "Choisir un évenement",
 			"required": true,
@@ -46,9 +46,8 @@
 		"name": "date",
 		"options": {
 			"type": "date",
-			"label": "Date de l'évenement",
+			"label": "Date de l'évènement",
 			"class": "input",
-			"placeholder": "99-99-9999",
 			"required": true,
 			"value": true,
 			"pattern": "/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/",
