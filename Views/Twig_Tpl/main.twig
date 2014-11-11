@@ -23,6 +23,9 @@
 		<header>
 			<h1>My WishList</h1>
 			{% block header %}
+				{% if message is defined %}
+					<div id='message'>{{ message }}</div>
+				{% endif %}
 			{% endblock %}
 			{% block nav %}
 			{% endblock %}

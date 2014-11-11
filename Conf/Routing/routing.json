@@ -21,6 +21,12 @@
 		"url": "/connexion",
 		"constant": "URL_SIGNIN",
 		"controller":"WishList\\Controllers\\Home::signIn"
+	},
+
+	"user": {
+		"url": "/user",
+		"constant": "URL_USER",
+		"controller":"WishList\\Controllers\\User::show"
 	}
 
 

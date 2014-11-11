@@ -3,10 +3,14 @@
 namespace WishList\Controllers;
 
 use Bundles\Formulaires\Forms;
-use WishList\Bundles\Profil\Profil;
 
 use Bundles\Parametres\Conf;
 use WishList\Models\UserModel;
+use Bundles\Bdd\Db;
+use Bundles\Bdd\Model;
+use Services\Profil\Profil;
+
+use WishList\Services\Profil\ProfilExtend;
 
 /**
 * 
@@ -25,21 +29,20 @@ class Home {
 		if (!$subscribeForm->isValid()) { /* Vérification du formulaire en fonction des contraintes */
 			$response['formSubscribe'] = $subscribeForm->render(); /* Création du HTML à afficher */
 		} else {
-			$test = UserModel::init();
-			$test->loadTable();
+			$post = array(
+				'login' => $_POST['login'], 
+				'pwd' => $_POST['pwd'],
+				'pwd2' => $_POST['pwd2'],
+				'email' => $_POST['email'],
+			);
 
-			/*$newTest = UserModel::getNewEntity();
-			$newTest['use_name'] = 'grosTest';
-			$newTest['use_pwd'] = 'grosTest';
-			$newTest['use_email'] = 'grosTest';
-			echo $test->setValues($newTest)->save());*/
+			$profil = new ProfilExtend();
+			if ($profil->subscription($post)) {
+				$this->getErrorMessage('Merci pour votre inscription.');
+			}
 
-			//echo $test->setValues(array('use_id' => '6', 'use_name' => 'petit_test'))->save();
-
-			//echo $test->setValues(array('use_id' => '6'))->delete();
-			
-
-			echo "formulaire valide !"; /* Traitement à effectuer */
+			header('location:' . Conf::getLinks()->getConf()['webroot']);
+			die();
 		}
 
 		return $response;
@@ -51,11 +54,33 @@ class Home {
 		if (!$signIn->isValid()) { /* Vérification du formulaire en fonction des contraintes */
 			$response['formSignIn'] = $signIn->render(); /* Création du HTML à afficher */
 		} else {
-			echo "formulaire valide !"; /* Traitement à effectuer */
+			$post = array(
+				'login' => $_POST['login'], 
+				'pwd' => $_POST['pwd'],
+			);
+
+			$profil = new ProfilExtend();
+			if ($profil->connection($post)) {
+				$this->getErrorMessage('Vous êtes maintenant connecté.');
+			}
+
+			header('location:' . Conf::getLinks()->getConf()['user']);
+			die();
 		}
 		
 		return $response;
 	}
+
+
+
+	protected function getErrorMessage($message) {
+		if(isset($_SESSION['message'])) $_SESSION["message"] .= $message;
+		else $_SESSION['message'] = $message;
+
+	}
+
+
+
 
 }
 

@@ -1,0 +1,64 @@
+{
+	"Type": {
+		"name": "type",
+		"options": {
+			"type": "choice",
+			"label": "Evenement",
+			"class": "input",
+			"placeholder": "Choisir un évenement",
+			"required": true,
+			"value": true,
+			"choices": {
+				"noel": "Noël",
+				"birthday": "Anniversaire"
+			},
+			"list": true,
+			"constraints":{
+				"NotBlank": true,
+				"Type": "string"
+			}
+		}
+	},
+	"Interessed": {
+		"name": "interessed",
+		"options": {
+			"type": "text",
+			"label": "Nom des intéressés",
+			"class": "input",
+			"placeholder": "Jean",
+			"required": true,
+			"value": true,
+			"constraints":{
+				"NotBlank": true,
+				"Type": "string",
+				"Regex": {
+					"pattern": "/.*/",
+					"match": true
+				},
+				"Length":{
+					"min": 5,
+					"max": 16
+				}
+			}
+		}
+	},
+	"Date": {
+		"name": "date",
+		"options": {
+			"type": "date",
+			"label": "Date de l'évenement",
+			"class": "input",
+			"placeholder": "99-99-9999",
+			"required": true,
+			"value": true,
+			"pattern": "/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/",
+			"constraints":{
+				"NotBlank": true,
+				"Type": "string",
+				"Date": {
+					"format": "fr"
+				}
+			}
+		}
+	}
+}

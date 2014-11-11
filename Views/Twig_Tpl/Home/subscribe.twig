@@ -7,24 +7,25 @@
 
 	{% block header %}
 		<h2>Inscription</h2>
+		{{ parent() }}
 	{% endblock %}
 			
 
 	{% block container %}
 		<div id="description">
 			<form method="POST" action="{{ href }}">
-			{{ form('Subscribe', 'login') }} 
-			{{ form('Subscribe', 'pwd') }} 
-			{{ form('Subscribe', 'pwd2') }} 
-			{{ form('Subscribe', 'email') }} 
-			
-			<div id="form-btn">
-				<a class="btn" href="/">
-					<i class="fa fa-remove fa-fw"></i>
-					<span>Annuler</span>
-				</a>
-				<button id="submit" class="btn" type="submit" name="submit"><i class="fa fa-edit fa-fw"></i> S'inscrire</button>
-			</div>
-		</form>
+				{{ form('Subscribe', 'login') }} 
+				{{ form('Subscribe', 'pwd') }} 
+				{{ form('Subscribe', 'pwd2') }} 
+				{{ form('Subscribe', 'email') }} 
+				
+				<div id="form-btn">
+					<a class="btn" href="/">
+						<i class="fa fa-remove fa-fw"></i>
+						<span>Annuler</span>
+					</a>
+					<button id="submit" class="btn" type="submit" name="submit"><i class="fa fa-edit fa-fw"></i> S'inscrire</button>
+				</div>
+			</form>
 		</div>
 	{% endblock %}

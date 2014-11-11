@@ -1,0 +1,88 @@
+{% extends "main.twig" %}
+
+	{% block stylesheetBase %}
+		{{ parent() }}
+		<link rel="stylesheet" href="css/views/profil.css">
+	{% endblock %}
+
+	{% block javascript %}
+		{{ parent() }}
+		<script type="text/javascript" src="js/views/user.js"></script>
+	{% endblock %}
+
+{% block header %}
+		{{ parent() }}
+		<h2>Créez une liste et partagez-la avec qui vous voulez</h2>
+	{% endblock %}
+			
+
+	{% block container %}
+		<div id="menuList">
+			<ul>
+				<li><a class="btn active" href="#newList">
+					<i class="fa fa-building-o fa-fw fa-rotate-180"></i>
+					<span>Nouvelle Liste</span>
+				</a></li>
+				<li><a class="btn" href="#myList">
+					<i class="fa fa-list-ul fa-fw"></i>
+					<span>Mes Listes</span>
+				</a></li>
+				<li><a class="btn" href="#searchList">
+					<i class="fa fa-search fa-fw"></i>
+					<span>Chercher Liste</span>
+				</a></li>
+				<li><a class="btn" href="#profil">
+					<i class="fa fa-user fa-fw"></i>
+					<span>Mon Profil</span>
+				</a></li>
+
+			</ul>
+		</div>
+		<div id="menuContent">
+			<div id="newList">
+				<form method="POST" action="{{ href }}">
+					{{ form('NewList', 'type') }} 
+					{{ form('NewList', 'interessed') }} 
+					{{ form('NewList', 'date') }} 
+					<div id="form-btn">
+						<button id="submit" class="btn" type="submit" name="submit"><i class="fa fa-check fa-fw"></i> Créer ma liste</button>
+					</div>
+				</form>	
+			</div>
+			<div id="myList">
+				<ul>
+					<li><a href="">Liste 1</a></li>
+					<li><a href="">Liste 2</a></li>
+					<li><a href="">Liste 3</a></li>
+					<li><a href="">Liste 4</a></li>
+					<li><a href="">Liste 5</a></li>
+				</ul>
+			</div>
+			<div id="searchList">
+				<form method="POST" action="{{ href }}">
+					<div class="container-form">
+						<label for="searchListInput" class="label-form">Rechercher une liste</label>
+						<div class="wrapper"><input type="text" id="searchListInput" class="input"></div>
+					</div>
+					<p>Résultat de la recherche :</p>
+					<table>
+						<thead></thead>
+						<tbody></tbody>
+					</table>
+				</form>	
+			</div>
+			<div id="profil">
+				<form method="POST" action="{{ href }}">
+					{{ form('Profil', 'oldPwd') }} 
+					{{ form('Profil', 'pwd') }} 
+					{{ form('Profil', 'pwd2') }} 
+					{{ form('Profil', 'email') }} 
+					
+					<div id="form-btn">
+						<button id="submit" class="btn" type="submit" name="submit"><i class="fa fa-check fa-fw"></i> Modifier mon profil</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+	{% endblock %}

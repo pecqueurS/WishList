@@ -9,7 +9,7 @@ use Bundles\Bdd\Model;
 
 class UserModel extends Model {
 
-	protected $tableName = "wl_user";
+	//protected $tableName = "wl_user";
 
 }
 
