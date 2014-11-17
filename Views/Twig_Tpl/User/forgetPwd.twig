@@ -6,7 +6,7 @@
 	{% endblock %}
 
 	{% block header %}
-		<h2>Connexion</h2>
+		<h2>Mot de passe oublié</h2>
 		{{ parent() }}
 	{% endblock %}
 			
@@ -14,18 +14,13 @@
 	{% block container %}
 		<div id="description">
 			<form method="POST" action="{{ href }}">
-				{{ form('SignIn', 'login') }} 
-				{{ form('SignIn', 'pwd') }} 
+				{{ form('ForgetPwd', 'email') }} 
 				<div id="form-btn">
 					<a class="btn" href="/">
 						<i class="fa fa-remove fa-fw"></i>
 						<span>Annuler</span>
 					</a>
-					<a class="btn" href="/forgetPwd">
-						<i class="fa fa-question-circle fa-fw"></i>
-						<span>Mot de passe oublié</span>
-					</a>
-					<button id="submit" class="btn" type="submit" name="submit"><i class="fa fa-sign-in fa-fw"></i> Se connecter</button>
+					<button id="submit" class="btn" type="submit" name="submit"><i class="fa fa-send-o fa-fw"></i> Envoyer un nouveau mot de passe</button>
 				</div>
 			</form>
 		</div>

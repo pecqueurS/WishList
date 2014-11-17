@@ -6,10 +6,8 @@
 			"label": "Ancien mot de passe",
 			"class": "input",
 			"placeholder": "ancien mot de passe",
-			"required": true,
 			"value": true,
 			"constraints":{
-				"NotBlank": true,
 				"Type": "string",
 				"Regex": {
 					"pattern": "/.*/",
@@ -29,10 +27,8 @@
 			"label": "Modifier mon mot de passe",
 			"class": "input",
 			"placeholder": "nouveau mot de passe",
-			"required": true,
 			"value": true,
 			"constraints":{
-				"NotBlank": true,
 				"Type": "string",
 				"Regex": {
 					"pattern": "/.*/",
@@ -52,10 +48,8 @@
 			"label": "Confirmer le mot de passe",
 			"class": "input",
 			"placeholder": "confirmer mon mot de passe",
-			"required": true,
 			"value": true,
 			"constraints":{
-				"NotBlank": true,
 				"Type": "string",
 				"Regex": {
 					"pattern": "/.*/",
@@ -75,10 +69,12 @@
 			"label": "Modifier mon Email",
 			"class": "input",
 			"placeholder": "mon nouvel email",
-			"required": true,
 			"value": true,
 			"constraints":{
-				"NotBlank": true,
+				"Regex": {
+					"pattern": "/.*/",
+					"match": true
+				},	
 				"Type": "string",
 				"Email": true
 			}

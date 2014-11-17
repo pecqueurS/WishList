@@ -1,0 +1,19 @@
+{
+	"email": {
+		"name": "email",
+		"options": {
+			"type": "email",
+			"label": "Email",
+			"class": "input",
+			"placeholder": "mon email",
+			"required": true,
+			"value": true,
+			"constraints":{
+				"NotBlank": true,
+				"Type": "string",
+				"Email": true
+			}
+		}
+	}
+}
+

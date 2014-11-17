@@ -23,6 +23,18 @@
 		"controller":"WishList\\Controllers\\Home::signIn"
 	},
 
+	"out": {
+		"url": "/out",
+		"constant": "URL_OUT",
+		"controller":"WishList\\Controllers\\User::out"
+	},
+
+	"forgetPwd": {
+		"url": "/forgetPwd",
+		"constant": "URL_FORGET_PWD",
+		"controller":"WishList\\Controllers\\User::forgetPwd"
+	},
+
 	"user": {
 		"url": "/user",
 		"constant": "URL_USER",

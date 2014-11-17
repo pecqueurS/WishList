@@ -5,7 +5,6 @@ $(document).ready(function() {
 		$(this).addClass('active');
 
 		$('#menuContent > div').hide();
-		console.log($(element));
 		$(element).fadeIn('slow');
 	});
 
@@ -25,6 +24,15 @@ $(document).ready(function() {
 		firstDay: 1
 
 	}).mask("99-99-9999");
-;
+
+	var hash = window.location.hash;
+	if (hash != '') {
+		$('#menuList .active').removeClass('active');
+		$('#menuList a[href=' + hash + ']').addClass('active');
+		$('#menuContent > div').hide();
+		$(hash).show();
+	}
+	
+	//$('ul'+hash+':first').show();
 
 });

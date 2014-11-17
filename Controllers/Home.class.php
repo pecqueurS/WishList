@@ -18,12 +18,14 @@ use WishList\Services\Profil\ProfilExtend;
 class Home {
 	
 	public function show() {
+		$this->redirectUser('user', true);
 		$response = array();
 		
 		return $response;
 	}
 
 	public function subscribe() {
+		$this->redirectUser('user', true);
 		$response = array();
 		$subscribeForm = Forms::make('Subscribe'); /* Creation du formulaire d'après le json */
 		if (!$subscribeForm->isValid()) { /* Vérification du formulaire en fonction des contraintes */
@@ -38,17 +40,17 @@ class Home {
 
 			$profil = new ProfilExtend();
 			if ($profil->subscription($post)) {
-				$this->getErrorMessage('Merci pour votre inscription.');
+				self::getErrorMessage('Merci pour votre inscription.');
 			}
 
-			header('location:' . Conf::getLinks()->getConf()['webroot']);
-			die();
+			$this->redirectUser('webroot', false);
 		}
 
 		return $response;
 	}
 
 	public function signIn() {
+		$this->redirectUser('user', true);
 		$response = array();
 		$signIn = Forms::make('SignIn'); /* Creation du formulaire d'après le json */
 		if (!$signIn->isValid()) { /* Vérification du formulaire en fonction des contraintes */
@@ -61,11 +63,10 @@ class Home {
 
 			$profil = new ProfilExtend();
 			if ($profil->connection($post)) {
-				$this->getErrorMessage('Vous êtes maintenant connecté.');
-			}
+				self::getErrorMessage('Vous êtes maintenant connecté.');
+				$this->redirectUser('user', true);
+			} 
 
-			header('location:' . Conf::getLinks()->getConf()['user']);
-			die();
 		}
 		
 		return $response;
@@ -73,10 +74,17 @@ class Home {
 
 
 
-	protected function getErrorMessage($message) {
+	protected static function getErrorMessage($message) {
 		if(isset($_SESSION['message'])) $_SESSION["message"] .= $message;
 		else $_SESSION['message'] = $message;
 
+	}
+
+	protected function redirectUser($page, $isConnect = false) {
+		if (ProfilExtend::isConnected() === $isConnect) {
+			header('location:' . Conf::getLinks()->getConf()[$page]);
+			die;
+		}
 	}
 
 

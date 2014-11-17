@@ -44,7 +44,7 @@
 		</div>
 		<div id="menuContent">
 			<div id="newList">
-				<form method="POST" action="{{ href }}">
+				<form method="POST" action="{{ href }}#newList">
 					{{ form('NewList', 'type') }} 
 					{{ form('NewList', 'interessed') }} 
 					{{ form('NewList', 'date') }} 
@@ -76,7 +76,7 @@
 				</form>	
 			</div>
 			<div id="profil">
-				<form method="POST" action="{{ href }}">
+				<form method="POST" action="{{ href }}#profil">
 					{{ form('Profil', 'oldPwd') }} 
 					{{ form('Profil', 'pwd') }} 
 					{{ form('Profil', 'pwd2') }} 

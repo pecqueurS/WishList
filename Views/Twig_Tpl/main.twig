@@ -31,7 +31,7 @@
 			{% endblock %}
 			<aside>
 			{% if session.user is defined %}
-				<a href="{{ url.webroot }}">
+				<a title="Se déconnecter" href="{{ url.webroot }}out">
 					<i class="fa fa-toggle-on fa-fw"></i>
 					<span>Connecté</span>
 				</a>
