@@ -1,0 +1,248 @@
+.mylistTable td {
+	color: #78a9c0;
+    font-family: "HandWriter";
+    font-size: 2em;
+    padding: 0 15px;
+}
+
+.mylistTable tbody tr:hover {
+	background:transparent;
+	cursor:default;
+}
+
+#usersList {
+    border-bottom: 1px solid #b5d9ea;
+    padding-bottom:5px;
+}
+
+#otherUsers, #validUsers {
+	display: inline-block;
+	width: calc(50% - 3px);
+	vertical-align: top;
+}
+
+#waitingUsers h3, #validUsers h3 {
+	position:relative;
+	top:-1px;
+	display: inline-block;
+	padding:2px 8px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	font-size:0.8em;
+	color:#78a9c0;
+	border-bottom: 1px solid #b5d9ea;
+	border-left:1px solid #b5d9ea;
+	border-right:1px solid #b5d9ea;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#waitingUsers ul, #validUsers ul {
+	border:1px solid #b5d9ea;
+	padding:10px;
+	border-radius:5px;
+}
+
+#usersList li {
+	color:#78a9c0;
+	padding: 10px 15px;
+    border-bottom: 1px solid #b5d9ea;
+    cursor:default;
+}
+
+#usersList li:hover {
+    background: #c6eafb;
+
+}
+
+#usersList li i {
+	cursor:pointer;
+}
+
+#usersList li i:hover {
+	color:#49607A;
+}
+
+#newUsers a {
+	float:right;
+	margin-top:5px;
+	cursor:pointer;
+}
+
+header .btn {
+	display: inline-block;
+	padding:10px;
+	border: 2px solid #b5d9ea ;
+	border-radius: 7px;
+	color:#78a9c0;
+	background: transparent;
+}
+
+header .btn:hover {
+	background: #dff4fd;
+	border-color:#78a9c0;
+	color:#49607A;
+}
+
+.userIcon {
+	float:right;
+}
+
+#formatList > div {
+	float:left;
+	border-radius:0;
+	border: 1px solid #b5d9ea ;
+	cursor:pointer;
+}
+
+#formatList > div:hover {
+	border-color:#78a9c0;
+}
+
+#formatList > div:hover + div {
+	border-left: 1px solid transparent;
+}
+
+#formatList > div:first-child {
+	border-bottom-left-radius: 5px;
+}
+
+#formatList > div:not(:first-child) {
+	margin-left: -1px;
+}
+
+#formatList > div:last-child {
+	border-bottom-right-radius: 5px;
+}
+
+#formatList .btn {
+	padding:7px;
+	font-size:18px;
+}
+
+#formatList .active {
+	color:#49607a;
+	background: #78a9c0;
+	border:1px solid #78a9c0;
+}
+
+#list > ul {
+	padding-top:40px;
+}
+
+#list > ul > li {
+	display: inline-block;
+	padding:10px;
+	border: 2px solid #b5d9ea ;
+	border-radius: 7px;
+	color:#78a9c0;
+	background: transparent;
+	vertical-align:top;
+}
+
+#list > ul > li:hover {
+	background: #dff4fd;
+	border-color:#78a9c0;
+	color:#49607A;
+}
+
+.vignets > li {
+	width:200px;
+	margin:0 10px 15px;
+	cursor:default;
+}
+
+.vignets > li .image img {
+	width:200px;
+	height:200px;
+}
+
+.vignets > li .name {
+	font-size: 20px;
+	font-weight:bold;
+	text-align: center;
+	margin: 10px 0;
+	padding: 5px 0;
+	border-top:1px solid #b5d9ea;
+	border-bottom:1px solid #b5d9ea;
+	height:50px;
+	overflow: hidden;
+}
+
+.vignets > li .informations {
+	margin-bottom:10px
+}
+
+.vignets > li .action {
+	margin-left:1px;
+}
+
+.list > li {
+	display:block;
+	width:calc(100% - 45px);
+	margin:0 10px 15px;
+	cursor:default;
+}
+
+.list > li .image {
+	display:inline-block;
+	vertical-align: top;
+	margin-right:10px;
+}
+
+.list > li .image img {
+	width:40px;
+	height:40px;
+}
+
+.list > li .name {
+	display:inline-block;
+	vertical-align: top;
+	font-size: 20px;
+	font-weight:bold;
+	text-align: left;
+	padding: 5px 0;
+}
+
+.list > li .informations {
+	display:none;
+}
+
+.list > li .action {
+	float:right;
+}
+
+ul.group-btn > li {
+	float:left;
+	border-radius:0;
+	border: 2px solid #b5d9ea ;
+	cursor:pointer;
+}
+
+ul.group-btn > li:hover {
+	border-color:#78a9c0;
+}
+
+ul.group-btn > li:hover + li {
+	border-left: 2px solid transparent;
+}
+
+ul.group-btn > li:first-child {
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+ul.group-btn > li:not(:first-child) {
+	margin-left: -2px;
+}
+
+ul.group-btn > li:last-child {
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+ul.group-btn li {
+	padding:7px;
+	font-size:18px;
+}
+

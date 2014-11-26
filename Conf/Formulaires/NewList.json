@@ -9,8 +9,12 @@
 			"required": true,
 			"value": true,
 			"choices": {
+				"wedding": "Mariage",
+				"birth": "Naissance",
+				"baptism": "Baptême",
 				"noel": "Noël",
-				"birthday": "Anniversaire"
+				"birthday": "Anniversaire",
+				"other": "Autre"
 			},
 			"list": true,
 			"constraints":{
@@ -37,7 +41,7 @@
 				},
 				"Length":{
 					"min": 5,
-					"max": 16
+					"max": 255
 				}
 			}
 		}

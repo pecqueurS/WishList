@@ -54,13 +54,24 @@
 				</form>	
 			</div>
 			<div id="myList">
-				<ul>
-					<li><a href="">Liste 1</a></li>
-					<li><a href="">Liste 2</a></li>
-					<li><a href="">Liste 3</a></li>
-					<li><a href="">Liste 4</a></li>
-					<li><a href="">Liste 5</a></li>
-				</ul>
+				<table class="mylistTable">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Evenement</th>
+							<th>Nom</th>
+						</tr>
+					</thead>
+					<tbody>
+					{% for wishlist in wishlists %}
+						<tr data-id="{{ wishlist.wis_id }}">
+							<td>{{ wishlist.wis_date|date('d-m-Y') }}</td>
+							<td>{{ wishlist.wis_type }}</td>
+							<td>{{ wishlist.wis_name }}</td>
+						</tr>
+					{% endfor %}
+					</tbody>
+				</table>
 			</div>
 			<div id="searchList">
 				<form method="POST" action="{{ href }}">

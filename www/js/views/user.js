@@ -33,6 +33,9 @@ $(document).ready(function() {
 		$(hash).show();
 	}
 	
-	//$('ul'+hash+':first').show();
+	$('.mylistTable tbody tr').click(function() {
+		var id = $(this).data('id');
+		document.location.href = location.origin + '/maListe-' + id; 
+	});
 
 });

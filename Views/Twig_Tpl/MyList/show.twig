@@ -1,0 +1,288 @@
+{% extends "main.twig" %}
+
+	{% block stylesheetBase %}
+		{{ parent() }}
+		<link rel="stylesheet" href="js/datepicker-jquery-ui-1.11.2/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/views/maliste.css">
+	{% endblock %}
+
+	{% block javascript %}
+		{{ parent() }}
+		<script src="js/datepicker-jquery-ui-1.11.2/jquery-ui.min.js"></script>
+		<script src="js/mask-jquery-plugin/jquery.maskedinput.min.js"></script>
+
+		<script type="text/javascript" src="js/views/maliste.js"></script>
+	{% endblock %}
+
+{% block header %}
+		{{ parent() }}
+		<div id="myList">
+			<table class="mylistTable">
+				<tbody>
+					<tr>
+						<th>Date : </th><td>24-12-2014</td>
+						<th>Evenement : </th><td>Noel</td>
+						<th>Nom : </th><td>Chloé</td>
+					</tr>
+				{# {% for wishlist in wishlists %}
+					<tr data-id="{{ wishlist.wis_id }}">
+						<td>{{ wishlist.wis_date|date('d-m-Y') }}</td>
+						<td>{{ wishlist.wis_type }}</td>
+						<td>{{ wishlist.wis_name }}</td>
+					</tr>
+				{% endfor %} #}
+				</tbody>
+			</table>
+		</div>
+		<div id="usersList">
+			<div id="validUsers">
+				<h3>Utilisateurs authorisés</h3>
+				<ul>
+					<li>Stephane
+						<span class="userIcon">
+							<i class="fa fa-remove fa-fw" title="Supprimer"></i>
+						</span>
+					</li>
+					<li>Marion
+						<span class="userIcon">
+							<i class="fa fa-remove fa-fw" title="Supprimer"></i>
+						</span>
+					</li>
+					<li>Poupy & Nouchka
+						<span class="userIcon">
+							<i class="fa fa-remove fa-fw" title="Supprimer"></i>
+						</span>
+					</li>
+					<li>Papy & Nanou
+						<span class="userIcon">
+							<i class="fa fa-remove fa-fw" title="Supprimer"></i>
+						</span>
+					</li>
+					<li>Isabelle
+						<span class="userIcon">
+							<i class="fa fa-remove fa-fw" title="Supprimer"></i>
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div id="otherUsers">
+				<div id="waitingUsers">
+					<h3>En attente</h3>
+					<ul>
+						<li>Ameline
+							<span class="userIcon">
+								<i class="fa fa-check fa-fw" title="Valider"></i>
+								<i class="fa fa-remove fa-fw" title="Supprimer"></i>
+							</span>
+						</li>
+						<li>Noemie
+							<span class="userIcon">
+								<i class="fa fa-check fa-fw" title="Valider"></i>
+								<i class="fa fa-remove fa-fw" title="Supprimer"></i>
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div id="newUsers">
+					<a class="btn active">
+						<span>Ajouter un utilisateur</span>
+						<i class="fa fa-plus fa-fw"></i>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+			
+	{% endblock %}
+			
+
+	{% block container %}
+		<div id="formatList" class="userIcon">
+			<div class="btn" data-type="list"><i class="fa fa-list-ul fa-fw" title="Liste"></i></div>
+			<div class="btn active" data-type="vignets"><i class="fa fa-th fa-fw" title="Vignette"></i></div>
+		</div>
+
+		<div id="list">
+			<ul class="vignets">
+				<li>
+					<div class="image"><img src="articles/test1.jpg"></div>
+					<div class="name">Super beaux Poissons magiques</div>
+					<ul class="informations">
+						<li title="Prix indicatif">
+							<i class="fa fa-money fa-fw"></i> : 
+							<span style="font-weight:bold;">- <i class="fa fa-euro fa-fw"></i></span>
+						</li> 
+						<li title="A été vu">
+							<i class="fa fa-map-marker fa-fw"></i> : 
+							<span style="font-weight:bold">Non renseigné</span>
+						</li> 
+						<li title="Offert par">
+							<i class="fa fa-gift fa-fw"></i> : 
+							<span style="font-weight:bold">Non renseigné</span>
+						</li> 
+					</ul>
+					<ul class="action group-btn">
+						<li title="Prix indicatif">
+							<i class="fa fa-money fa-fw"></i>
+						</li>
+						<li title="A été vu">
+							<i class="fa fa-map-marker fa-fw"></i>
+						</li>
+						<li title="Offrir">
+							<i class="fa fa-gift fa-fw"></i>
+						</li>
+						<li title="Commentaires">
+							<i class="fa fa-comments-o fa-fw"></i>
+						</li>
+						<li title="Supprimer">
+							<i class="fa fa-remove fa-fw"></i>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<div class="image"><img src="articles/test1.jpg"></div>
+					<div class="name">Poissons magiques</div>
+					<ul class="informations">
+						<li title="Prix indicatif">
+							<i class="fa fa-money fa-fw"></i> : 
+							<span style="font-weight:bold;">- <i class="fa fa-euro fa-fw"></i></span>
+						</li> 
+						<li title="A été vu">
+							<i class="fa fa-map-marker fa-fw"></i> : 
+							<span style="font-weight:bold">Non renseigné</span>
+						</li> 
+						<li title="Offert par">
+							<i class="fa fa-gift fa-fw"></i> : 
+							<span style="font-weight:bold">Non renseigné</span>
+						</li> 
+					</ul>
+					<ul class="action group-btn">
+						<li title="Prix indicatif">
+							<i class="fa fa-money fa-fw"></i>
+						</li>
+						<li title="A été vu">
+							<i class="fa fa-map-marker fa-fw"></i>
+						</li>
+						<li title="Offrir">
+							<i class="fa fa-gift fa-fw"></i>
+						</li>
+						<li title="Commentaires">
+							<i class="fa fa-comments-o fa-fw"></i>
+						</li>
+						<li title="Supprimer">
+							<i class="fa fa-remove fa-fw"></i>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<div class="image"><img src="articles/test1.jpg"></div>
+					<div class="name">Super beaux Poissons magiques</div>
+					<ul class="informations">
+						<li title="Prix indicatif">
+							<i class="fa fa-money fa-fw"></i> : 
+							<span style="font-weight:bold;">- <i class="fa fa-euro fa-fw"></i></span>
+						</li> 
+						<li title="A été vu">
+							<i class="fa fa-map-marker fa-fw"></i> : 
+							<span style="font-weight:bold">Non renseigné</span>
+						</li> 
+						<li title="Offert par">
+							<i class="fa fa-gift fa-fw"></i> : 
+							<span style="font-weight:bold">Non renseigné</span>
+						</li> 
+					</ul>
+					<ul class="action group-btn">
+						<li title="Prix indicatif">
+							<i class="fa fa-money fa-fw"></i>
+						</li>
+						<li title="A été vu">
+							<i class="fa fa-map-marker fa-fw"></i>
+						</li>
+						<li title="Offrir">
+							<i class="fa fa-gift fa-fw"></i>
+						</li>
+						<li title="Commentaires">
+							<i class="fa fa-comments-o fa-fw"></i>
+						</li>
+						<li title="Supprimer">
+							<i class="fa fa-remove fa-fw"></i>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<div class="image"><img src="articles/test1.jpg"></div>
+					<div class="name">Super beaux Poissons magiques</div>
+					<ul class="informations">
+						<li title="Prix indicatif">
+							<i class="fa fa-money fa-fw"></i> : 
+							<span style="font-weight:bold;">- <i class="fa fa-euro fa-fw"></i></span>
+						</li> 
+						<li title="A été vu">
+							<i class="fa fa-map-marker fa-fw"></i> : 
+							<span style="font-weight:bold">Non renseigné</span>
+						</li> 
+						<li title="Offert par">
+							<i class="fa fa-gift fa-fw"></i> : 
+							<span style="font-weight:bold">Non renseigné</span>
+						</li> 
+					</ul>
+					<ul class="action group-btn">
+						<li title="Prix indicatif">
+							<i class="fa fa-money fa-fw"></i>
+						</li>
+						<li title="A été vu">
+							<i class="fa fa-map-marker fa-fw"></i>
+						</li>
+						<li title="Offrir">
+							<i class="fa fa-gift fa-fw"></i>
+						</li>
+						<li title="Commentaires">
+							<i class="fa fa-comments-o fa-fw"></i>
+						</li>
+						<li title="Supprimer">
+							<i class="fa fa-remove fa-fw"></i>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<div class="image"><img src="articles/test1.jpg"></div>
+					<div class="name">Super beaux Poissons magiques</div>
+					<ul class="informations">
+						<li title="Prix indicatif">
+							<i class="fa fa-money fa-fw"></i> : 
+							<span style="font-weight:bold;">- <i class="fa fa-euro fa-fw"></i></span>
+						</li> 
+						<li title="A été vu">
+							<i class="fa fa-map-marker fa-fw"></i> : 
+							<span style="font-weight:bold">Non renseigné</span>
+						</li> 
+						<li title="Offert par">
+							<i class="fa fa-gift fa-fw"></i> : 
+							<span style="font-weight:bold">Non renseigné</span>
+						</li> 
+					</ul>
+					<ul class="action group-btn">
+						<li title="Prix indicatif">
+							<i class="fa fa-money fa-fw"></i>
+						</li>
+						<li title="A été vu">
+							<i class="fa fa-map-marker fa-fw"></i>
+						</li>
+						<li title="Offrir">
+							<i class="fa fa-gift fa-fw"></i>
+						</li>
+						<li title="Commentaires">
+							<i class="fa fa-comments-o fa-fw"></i>
+						</li>
+						<li title="Supprimer">
+							<i class="fa fa-remove fa-fw"></i>
+						</li>
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		
+		
+	{% endblock %}

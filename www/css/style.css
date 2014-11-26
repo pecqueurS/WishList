@@ -137,3 +137,29 @@ td.ui-datepicker-today a.ui-state-highlight{
 	border-color:#78a9c0;
 	color:#49607A;
 }
+
+.mylistTable {
+    width: 100%;
+}
+
+.mylistTable th {
+    font-weight: bold;
+}
+
+.mylistTable th, .mylistTable td {
+    padding: 10px 15px;
+}
+
+.mylistTable tbody tr:hover {
+    background: #c6eafb;
+}
+
+.mylistTable tr {
+    border-bottom: 1px solid #b5d9ea;
+    cursor:default;
+}
+
+.mylistTable tbody tr {
+    cursor:pointer;
+}
+
