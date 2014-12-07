@@ -79,6 +79,7 @@ body > #content > header > aside i {
 	font-size: 1.2rem;
 }
 
+.modalElement .btn,
 .container .btn {
 	display: inline-block;
 	padding:10px;
@@ -88,6 +89,7 @@ body > #content > header > aside i {
 	background: transparent;
 }
 
+.modalElement .btn:hover,
 .container .btn:hover {
 	background: #dff4fd;
 	border-color:#78a9c0;

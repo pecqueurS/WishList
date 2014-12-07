@@ -20,7 +20,7 @@ class Mylist {
 	public function show($listId) {
 		$this->redirectUser('webroot', false);
 		$response = array();
-		var_dump($listId);
+		//var_dump($listId);
 		return $response;
 	}
 
